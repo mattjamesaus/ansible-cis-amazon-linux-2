@@ -6,7 +6,7 @@
 ###############################################
 
 cis_apply_level_1_profile: true    # Whether Level 1 of the benchmark should be applied
-cis_apply_level_2_profile: true   # Whether Level 2 of the benchmark should be applied
+cis_apply_level_2_profile: false   # Whether Level 2 of the benchmark should be applied
 
 # A list of Level 1 recommendations to exclude (i.e. ['1.1.1.1'])
 # DO NOT modify it here, but in vars/
@@ -48,7 +48,7 @@ cis_partition_dev_home: "/dev/xvda4"
 cis_partition_mnt_home: "/home"
 cis_partition_fs_home: "ext4"
 
-cis_partition_dev_var: "/dev/xvda5"
+cis_partition_dev_var: "/dev/xvdg1"
 cis_partition_mnt_var: "/var"
 cis_partition_fs_var: "ext4"
 
@@ -74,7 +74,7 @@ fs_mounts:
     opts: 'rw,nosuid,nodev,noexec,relatime'
   - mountpoint: '/var/tmp'
     device: 'tmpfs'
-    fstype: 'tmpfs'
+    fstype: 'ext4'
     opts: 'rw,nosuid,nodev,noexec,relatime'
   - mountpoint: '/dev/shm'
     device: 'tmpfs'
