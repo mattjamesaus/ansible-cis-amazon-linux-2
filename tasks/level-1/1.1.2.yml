@@ -3,8 +3,6 @@
 
 # 1.1.2 Ensure /tmp is configured (Scored)
 
-
-
 - name: 1.1.2 - Ensure separate partition exists for /tmp (Scored)
   mount:
     name: "{{ item.mountpoint }}"

@@ -69,8 +69,8 @@ A more advanced example, which includes modifications to the default values used
   vars:
     cis_level_1_exclusions:
       - 5.4.4
-      - 3.4.2
-      - 3.4.3
+      - 3.3.2
+      - 3.3.3
       - 6.2.13   
     cis_pass_max_days: 45
     cis_umask_default: 027
