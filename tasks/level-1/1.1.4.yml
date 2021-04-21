@@ -1,9 +1,9 @@
 # Standards: 0.11
 ---
 
-# 1.1.4 Ensure nosuid option set on /tmp partition
+# 1.1.4 Ensure nosuid option set on /tmp partition (scored)
 
-- name: 1.1.4 - Ensure nosuid option set on /tmp partition
+- name: 1.1.4 - Ensure nosuid option set on /tmp partition (scored)
   mount:
     name: "{{ item.mountpoint }}"
     state: mounted

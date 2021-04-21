@@ -3,7 +3,7 @@
 
 # 1.1.1.4 - Ensure mounting of squashfs filesystems is disabled
 
-- name: 1.1.1.4 - Unload squashfs module
+- name: 1.1.1.4 - Ensure mounting of squashfs filesystems is disabled
   modprobe:
     name: squashfs
     state: absent

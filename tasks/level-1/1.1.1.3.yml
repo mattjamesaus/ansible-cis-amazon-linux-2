@@ -3,7 +3,7 @@
 
 # 1.1.1.3 - Ensure mounting of hfsplus filesystems is disabled
 
-- name: 1.1.1.3 - Unload hfsplus module
+- name: 1.1.1.3 - Ensure mounting of hfsplus filesystems is disabled
   modprobe:
     name: hfsplus
     state: absent

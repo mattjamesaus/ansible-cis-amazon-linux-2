@@ -3,7 +3,7 @@
 
 # 1.1.1.5 - Ensure mounting of udf filesystems is disabled
 
-- name: 1.1.1.5 - Unload udf module
+- name: 1.1.1.5 - Ensure mounting of udf filesystems is disabled
   modprobe:
     name: udf
     state: absent
