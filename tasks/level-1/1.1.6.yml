@@ -2,17 +2,18 @@
 ---
 
 # 1.1.6 Ensure separate partition exists for /var (Scored)
+# Breaks test host down, hence should only be implemented on new installations
 
-- name: 1.1.6 - Ensure separate partition exists for /var (Scored)
-  mount:
-    name: "{{ item.mountpoint }}"
-    state: present
-    fstype: "{{item.fstype}}"
-    src: "{{item.device}}"
-  with_items:
-    - { mountpoint: "{{cis_partition_mnt_var}}", device: "{{cis_partition_dev_var}}", fstype: "{{cis_partition_fs_var}}" }
-  tags:
-      - level-1
-      - section-1
-      - "1.1.6"
-      - scored
+# - name: 1.1.6 - Ensure separate partition exists for /var (Scored)
+#   mount:
+#     name: "{{ item.mountpoint }}"
+#      state: present
+#      fstype: "{{item.fstype}}"
+#      src: "{{item.device}}"
+#    with_items:
+#      - { mountpoint: "{{cis_partition_mnt_var}}", device: "{{cis_partition_dev_var}}", fstype: "{{cis_partition_fs_var}}" }
+#   tags:
+#       - level-1
+#       - section-1
+#       - "1.1.6"
+#       - scored

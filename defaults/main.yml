@@ -48,7 +48,7 @@ cis_partition_dev_home: "/dev/xvda4"
 cis_partition_mnt_home: "/home"
 cis_partition_fs_home: "ext4"
 
-cis_partition_dev_var: "/dev/xvdg1"
+cis_partition_dev_var: "/dev/xvda1"
 cis_partition_mnt_var: "/var"
 cis_partition_fs_var: "ext4"
 
@@ -74,7 +74,7 @@ fs_mounts:
     opts: 'rw,nosuid,nodev,noexec,relatime'
   - mountpoint: '/var/tmp'
     device: 'tmpfs'
-    fstype: 'ext4'
+    fstype: 'tmpfs'
     opts: 'rw,nosuid,nodev,noexec,relatime'
   - mountpoint: '/dev/shm'
     device: 'tmpfs'
