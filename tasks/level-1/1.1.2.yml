@@ -1,8 +1,7 @@
 # Standards: 0.11
-#---
+---
 
 # 1.1.2 Ensure /tmp is configured (Scored)
-# Something goes wrong, though it works according to CIS remediation steps. It breaks the system
 
 - name: 1.1.2 - Ensure separate partition exists for /tmp (Scored)
   mount:
@@ -29,32 +28,3 @@
       - section-1
       - "1.1.2"
       - scored
-
-# - name: 1.1.2 - Ensure the tmp.mount service is enabled for boot time auto-start
-#   systemd:
-#     name: tmp.mount
-#     enabled: yes
-#     masked: no
-#   tags:
-#       - level-1
-#       - section-1
-#       - "1.1.2"
-#       - scored
-
-# - name: 1.1.2 - Ensure /tmp is configured (Scored)
-#   lineinfile: 
-#     dest: '/etc/systemd/system/local-fs.target.wants/tmp.mount'
-#     regexp: "{{ item.regexp }}"
-#     line: "{{ item.line }}"
-#     state: present
-#   with_items: 
-#     - { regexp: '^[Mount]', line: '[Mount]' }
-#     - { regexp: '^What', line: 'What=tmpfs' }
-#     - { regexp: '^Where', line: 'Where=/tmp' }
-#     - { regexp: '^Type', line: 'Type=tmpfs' }
-#     - { regexp: '^Options', line: 'Options=mode=1777,strictatime,noexec,nodev,nosuid' }
-#   tags:
-#       - level-1
-#       - section-1
-#       - "1.1.2"
-#       - scored

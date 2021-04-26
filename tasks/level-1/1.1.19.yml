@@ -2,16 +2,18 @@
 ---
 
 # 1.1.19 - Disable Automounting
+# There's no such service in Amazon Linux 2 as autofs. Gives fatal error. 
+# Besides, it's used to prevent using malicious usb-drives etc, which isimpossible with ec2.
 
-- name: 1.1.19 - Disable autofs
-  service:
-    name: autofs
-    enabled: false
-    state: stopped
-  ignore_errors: true
-  register: autofs_result
-  failed_when: "autofs_result.failed and 'no service or tool found for: autofs' not in autofs_result.msg"
-  tags:
-    - level-1
-    - "1.1.19"
-    - scored
+# - name: 1.1.19 - Disable autofs
+#   service:
+#     name: autofs
+#     enabled: false
+#     state: stopped
+#   ignore_errors: true
+#   register: autofs_result
+#   failed_when: "autofs_result.failed and 'no service or tool found for: autofs' not in autofs_result.msg"
+#   tags:
+#     - level-1
+#     - "1.1.19"
+#     - scored
