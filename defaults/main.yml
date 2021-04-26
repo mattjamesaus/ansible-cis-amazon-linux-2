@@ -57,8 +57,8 @@ cis_aide_src_database_filename: "/var/lib/aide/aide.db.new.gz"
 
 cis_aide_cron_user: "root"
 cis_aide_cron_job: "/usr/sbin/aide --check"
-cis_aide_cron_minute: 0
-cis_aide_cron_hour: 22
+cis_aide_cron_minute: "0"
+cis_aide_cron_hour: "22"
 cis_aide_cron_dow: "*" # Day of week
 cis_aide_cron_dom: "*" # Day of month
 cis_aide_cron_month: "*"
