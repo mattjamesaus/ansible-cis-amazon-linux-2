@@ -3,17 +3,17 @@
 
 # 1.1.8 Ensure nodev option set on /var/tmp partition (scored)
 
-# - name: 1.1.8 - Ensure nodev option set on /var/tmp partition (scored)
-#   mount:
-#     name: "{{ item.mountpoint }}"
-#     state: mounted
-#     fstype: "{{ item.fstype }}"
-#     src: "{{ item.device }}"
-#     opts: "{{ item.opts.split(',') | union(['nodev']) | join(',') }}"
-#   with_items: 
-#     - "{{ fs_mounts | selectattr('mountpoint', 'equalto', '/var/tmp') | list }}"
-#   tags:
-#     - level-1
-#     - section-1
-#     - "1.1.8"
-#     - scored
+- name: 1.1.8 - Ensure nodev option set on /var/tmp partition (scored)
+  mount:
+    name: "{{ item.mountpoint }}"
+    state: mounted
+    fstype: "{{ item.fstype }}"
+    src: "{{ item.device }}"
+    opts: "{{ item.opts.split(',') | union(['nodev']) | join(',') }}"
+  with_items: 
+    - "{{ fs_mounts | selectattr('mountpoint', 'equalto', '/var/tmp') | list }}"
+  tags:
+    - level-1
+    - section-1
+    - "1.1.8"
+    - scored
