@@ -1,0 +1,12 @@
+---
+
+- hosts: amazon_linux_2
+  connection: ssh
+  gather_facts: true
+  become: yes
+
+  roles:
+    - { role: ansible-cis-amazon-linux-2,
+        in_vm: true,
+        cis_enable_rsyslog: true
+      }
